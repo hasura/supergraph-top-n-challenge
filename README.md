@@ -1,6 +1,6 @@
 # The Supergraph Top-N Challenge
 
-> $2250 in prizes. Can you build and execute the fastest GraphQL gateway?
+> Winner takes a [$1000](#prizes) prize. Can you build and execute the fastest GraphQL gateway?
 
 - Build a supergraph that processes a simple “top N” query that fetches data from 2 domain services (backed by 2 different databases)
 - Lowest P95 at 100 RPS wins!

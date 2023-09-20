@@ -6,7 +6,7 @@ Build a federated GraphQL endpoint that can process the following query: retriev
 
 The system must mirror the common pattern of having a service that resolves queries for each database, and a separate federation component.
 
-![System Architecture](https://github.com/hasura/graphqlconf-federation-competition-databases/blob/8e0f0a6775e5dd1b59b6f3e63e5af8a9c8a042aa/architecture.png)
+![System Architecture](https://github.com/hasura/graphqlconf-federation-competition-databases/blob/064dbe966586b28724e7dccc18eb6e3e552d36f6/architecture.png)
 
 Submit a link to your git repository as a Github Issue.
 

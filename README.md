@@ -1,4 +1,6 @@
-# GraphQLConf Top N Challenge 2023
+# Supergraph Top N challenge
+
+> One winner. $1500. Can you build and execute the fastest GraphQL federated query?
 
 You have two postgres databases. One contains the `threads` table and another contains the `posts` table.
 

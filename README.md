@@ -2,7 +2,7 @@
 
 > $2250 in prizes. Can you build and execute the fastest GraphQL gateway?
 
-- Build a supergraph that processes a simple “top N” query that fetches data from 2 domain services (backed by 2 different databases).
+- Build a supergraph that processes a simple “top N” query that fetches data from 2 domain services (backed by 2 different databases)
 - Lowest P95 at 100 RPS wins!
 - Use any stack or approach to build the GraphQL server.
 Eg: GraphQL federation or schema stitching or GraphQL gateway talking to 2 different REST/gRPC services.
@@ -13,9 +13,19 @@ You have to build:
 
 Submit a link to your git repository as a Github Issue!
 
-**Deadline**: Submit your entry by Thursday, 12:00 pm PT (noon), 21 September 2023
+**Deadline**: Submit your entry by Thursday, 12:00 pm PT (noon), 21 September 2023.
 
-# Problem Statement
+## TOC
+
+- [Problem Statement](#problem-statement)
+- [Goal](#goal)
+- [Environment and Setup](#environment-and-setup)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Test Cases / Examples](#test-cases--examples)
+- [Prizes](#prizes)
+- [Questions and Support](#questions-and-support)
+
+## Problem Statement
 
 You have two postgres databases. One contains the `threads` table and another contains the `posts` table.
 
@@ -141,6 +151,6 @@ Prizes are Amazon gift cards.
 - Winner: $1000
 - Runners-up: $750, $500
 
-## Questions & Support
+## Questions and Support
 
 For any questions or support, just open a Github Issue on this repo!

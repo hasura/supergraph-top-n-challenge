@@ -43,8 +43,6 @@ These are based on the provided dataset, please use them to confirm your respons
 
 We have assumed the argument name as `limit` as the examples show.
 
-Specify this argument name in your Github Issue.
-
 ### Case 1
 
 ```graphql

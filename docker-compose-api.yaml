@@ -1,0 +1,23 @@
+version: "3"
+services:
+  api-1:
+    build: 
+      context: ./api-1
+    volumes:
+      - ./api-1:/api
+    environment:
+      NODE_ENV: development
+      PG_CONNECTION_STRING: postgres://postgres:postgrespassword@host.docker.internal:7432/postgres 
+      PORT: 8000
+    ports: ['9080:8000'] 
+  api-2:
+    build: 
+      context: ./api-2
+    volumes:
+      - ./api2:/api
+    environment:
+      NODE_ENV: development
+      PG_CONNECTION_STRING: postgres://postgres:postgrespassword@host.docker.internal:8432/postgres 
+      PORT: 8000
+    ports: ['9090:8000'] 
+volumes:

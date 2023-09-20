@@ -82,7 +82,7 @@ and we give the `threadLimit` as 1 and `postLimit` as 2. The response should be 
 
 ### Case 2
 
-Limit values being updated for the respective variables. For `threadLimit` to be 1 and `postLimit` to be 2, the response should be like the one below:
+Limit values being updated for the respective variables. For `threadLimit` to be 2 and `postLimit` to be 1, the response should be like the one below:
 
 ```json
 {

@@ -1,4 +1,4 @@
-# Supergraph Top N challenge
+# The Supergraph Top-N query challenge
 
 > One winner. $1500. Can you build and execute the fastest GraphQL federated query?
 
@@ -8,14 +8,25 @@
 Eg: GraphQL federation or schema stitching or GraphQL gateway talking to 2 different REST/gRPC services.
 
 You have to build:
-- The graphql server
-- The 2 domain services
+- The graphql server (ref: GraphQL gateway in diagram below)
+- The 2 domain services (ref: Threads service, and Posts service in diagram below)
 
 You have two postgres databases. One contains the `threads` table and another contains the `posts` table.
 
 Build a GraphQL gateway that can process the following query: retrieve the first `n` `threads` sorted by `created` descending and for each, return the first `m` `posts` sorted by `created` descending.
 
-The system must mirror the common pattern of having a service that resolves queries for each database, and a separate gateway component.
+```
+query {
+  threads(limit: n) { # From Threads service
+    id
+    posts(limit: m) { # From Posts service
+      id
+    }
+  }
+}
+```
+
+The system must mirror the common pattern of having a domain service that resolves queries for each database, and a separate gateway component.
 
 ![System Architecture](https://github.com/hasura/graphqlconf-top-n-challenge/blob/efd453fd0a4bb2334cc5e7bc02d2a0ea90301795/architecture.png)
 
@@ -29,7 +40,7 @@ Your system will be run on an GCE E2 instance with 2 vCPU and 4 GB RAM by the Ha
 
 ## Goal
 
-We want to use this challenge to highlight the different approaches & design decisions that go into building the GraphQL gateway and how domain services get unified.
+While the challenge and prize money makes it fun, the goal of this challenge is really to highlight the different approaches & design decisions that go into building the GraphQL gateway and how domain services get unified.
 The Hasura team will put together a blogpost summarizing the different stacks and design approaches used by the participants!
 
 ## Environment and Setup
@@ -122,3 +133,14 @@ Limit values being updated for the respective variables. For `threadLimit` to be
   }
 }
 ```
+
+## Prizes
+
+Prizes are Amazon gift cards
+
+Winner: $1500
+Runner-ups: $750, $500
+
+## Questions & Support
+
+For any questions or support, just open a github issue on this repo!

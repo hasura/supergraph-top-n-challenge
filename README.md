@@ -1,6 +1,6 @@
-# The Supergraph Top-N query challenge
+# The Supergraph Top-N Challenge
 
-> One winner. $1500. Can you build and execute the fastest GraphQL federated query?
+> $2250 in prizes. Can you build and execute the fastest GraphQL federated query?
 
 - Build a supergraph that processes a simple “top N” query that fetches data from 2 domain services (backed by 2 diff DBs).
 - Lowest P95 at 100RPS wins!
@@ -28,9 +28,9 @@ query {
 
 The system must mirror the common pattern of having a domain service that resolves queries for each database, and a separate gateway component.
 
-![System Architecture](https://github.com/hasura/graphqlconf-top-n-challenge/blob/efd453fd0a4bb2334cc5e7bc02d2a0ea90301795/architecture.png)
-
 Submit a link to your git repository as a Github Issue.
+
+![System Architecture](https://github.com/hasura/graphqlconf-top-n-challenge/blob/efd453fd0a4bb2334cc5e7bc02d2a0ea90301795/architecture.png)
 
 ## How to Win
 
@@ -138,9 +138,9 @@ Limit values being updated for the respective variables. For `threadLimit` to be
 
 Prizes are Amazon gift cards.
 
-- Winner: $1500
-- Runner-ups: $750, $500
+- Winner: $1000
+- Runners-up: $750, $500
 
 ## Questions & Support
 
-For any questions or support, just open a github issue on this repo!
+For any questions or support, just open a Github Issue on this repo!

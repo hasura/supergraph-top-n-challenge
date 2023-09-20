@@ -18,17 +18,19 @@ Your system will be run on an GCE E2 instance with 2 vCPU and 4 GB RAM.
 
 ## Environment and Setup
 
-- Use the provided database `docker-compose.yml` file to start the two database services with preloaded test data
+- Use the provided database `docker-compose-db.yaml` file to start the two database services with preloaded test data
   - Use the ports bound on localhost to address the databases
   - Do not modify or optimise the database services
+  - You can use the command `docker compose -f docker-compose-db.yaml up -d` to start the databases
+  - The test bench will run these containers alongside the services you provide
 - In an independent repository / directory, build the remaining three services as separate docker containers
   - Serve the federated endpoint on port 8000
 - This repository must contain one `docker-compose.yml` that describes all the services
-- The test bench will run `docker compose up` in this directory, and this should completely initialise all services
+- The test bench will run `docker compose up` in this directory, and this should completely initialise all three services
 
 ## Acceptance Criteria
 
-- Your repository must contain one `docker-compose.yml` that completely describes the three services excluding the two database services provided
+- Your repository must contain one `docker-compose.yml` that completely describes the three services (do not include the two database services provided)
 - The federation endpoint must serve GraphQL
   - Inter-service protocol need not be (but can be) GraphQL
 - Do not implement query based response caching in your services (our test bench is pretty simple)

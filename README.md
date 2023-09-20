@@ -6,7 +6,7 @@ Build a GraphQL gateway that can process the following query: retrieve the first
 
 The system must mirror the common pattern of having a service that resolves queries for each database, and a separate gateway component.
 
-![System Architecture](https://github.com/hasura/graphqlconf-federation-competition-databases/blob/064dbe966586b28724e7dccc18eb6e3e552d36f6/architecture.png)
+![System Architecture](https://github.com/hasura/graphqlconf-top-n-challenge/blob/efd453fd0a4bb2334cc5e7bc02d2a0ea90301795/architecture.png)
 
 Submit a link to your git repository as a Github Issue.
 

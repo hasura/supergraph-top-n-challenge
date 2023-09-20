@@ -14,7 +14,7 @@ Submit a link to your git repository as a Github Issue.
 
 Have the lowest P95 latency at 100rps (we may decide to change the rps depending on the latency spread).
 
-Your system will be run on an GCE E2 instance with 2 vCPU and 4 GB RAM.
+Your system will be run on an GCE E2 instance with 2 vCPU and 4 GB RAM by the Hasura team post submission.
 
 ## Environment and Setup
 
@@ -41,22 +41,24 @@ Your system will be run on an GCE E2 instance with 2 vCPU and 4 GB RAM.
 
 These are based on the provided dataset, please use them to confirm your responses' correctness.
 
-Feel free to change the argument name for `limit` or `first` as the examples show.
+We have assumed the argument name as `limit` as the examples show.
 
 Specify this argument name in your Github Issue.
 
 ### Case 1
 
 ```graphql
-query {
-  threads (limit: 1) {
+query ($threadLimit: Int!, $postLimit: Int!) {
+  threads (limit: $threadLimit) {
     id
-    posts (limit: 2) {
+    posts (limit: $postLimit) {
       id
     }
   }
 }
 ```
+
+and we give the `threadLimit` as 1 and `postLimit` as 2. The response should be as below:
 
 ```json
 {
@@ -80,16 +82,7 @@ query {
 
 ### Case 2
 
-```graphql
-query {
-  threads (first: 2) {
-    id
-    posts (first: 1) {
-      id
-    }
-  }
-}
-```
+Limit values being updated for the respective variables. For `threadLimit` to be 1 and `postLimit` to be 2, the response should be like the one below:
 
 ```json
 {

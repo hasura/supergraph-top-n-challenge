@@ -14,7 +14,7 @@ Submit a link to your git repository as a Github Issue.
 
 Have the lowest P95 latency at 100rps (we may decide to change the rps depending on the latency spread).
 
-Your system will be run on an e2-small GCE instance.
+Your system will be run on an GCE E2 instance with 2 vCPU and 4 GB RAM.
 
 ## Environment and Setup
 

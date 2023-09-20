@@ -5,36 +5,10 @@
 -- Dumped from database version 16.0 (Debian 16.0-1.pgdg120+1)
 -- Dumped by pg_dump version 16.0 (Debian 16.0-1.pgdg120+1)
 
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
-SET default_tablespace = '';
-
-SET default_table_access_method = heap;
-
---
--- Name: threads; Type: TABLE; Schema: public; Owner: dbuser
---
-
 CREATE TABLE public.threads (
     id integer NOT NULL,
     created timestamp without time zone
 );
-
-
-ALTER TABLE public.threads OWNER TO dbuser;
-
---
--- Data for Name: threads; Type: TABLE DATA; Schema: public; Owner: dbuser
---
 
 COPY public.threads (id, created) FROM stdin;
 1704120699	2015-05-06 01:32:27.363942
@@ -1039,21 +1013,10 @@ COPY public.threads (id, created) FROM stdin;
 1159795018	2014-04-08 17:31:47.056401
 \.
 
-
---
--- Name: threads threads_pkey; Type: CONSTRAINT; Schema: public; Owner: dbuser
---
-
 ALTER TABLE ONLY public.threads
     ADD CONSTRAINT threads_pkey PRIMARY KEY (id);
 
-
---
--- Name: threads_created_idx; Type: INDEX; Schema: public; Owner: dbuser
---
-
 CREATE INDEX threads_created_idx ON public.threads USING btree (created DESC);
-
 
 --
 -- PostgreSQL database dump complete

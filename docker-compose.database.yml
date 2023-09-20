@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  db1:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: dbpwd
+      POSTGRES_DB: db
+  db2:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: dbpwd
+      POSTGRES_DB: db

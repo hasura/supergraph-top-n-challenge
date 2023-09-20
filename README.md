@@ -1,4 +1,4 @@
-# GraphQL Conf Federation Competition 2023
+# GraphQL Conf Federation Challenge 2023
 
 You have two postgres databases. One contains the `threads` table and another contains the `posts` table.
 

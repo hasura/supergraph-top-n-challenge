@@ -1,10 +1,10 @@
-# GraphQL Conf Federation Challenge 2023
+# GraphQLConf Top N Challenge 2023
 
 You have two postgres databases. One contains the `threads` table and another contains the `posts` table.
 
-Build a federated GraphQL endpoint that can process the following query: retrieve the first `n` `threads` sorted by `created` descending and for each, return the first `m` `posts` sorted by `created` descending.
+Build a GraphQL gateway that can process the following query: retrieve the first `n` `threads` sorted by `created` descending and for each, return the first `m` `posts` sorted by `created` descending.
 
-The system must mirror the common pattern of having a service that resolves queries for each database, and a separate federation component.
+The system must mirror the common pattern of having a service that resolves queries for each database, and a separate gateway component.
 
 ![System Architecture](https://github.com/hasura/graphqlconf-federation-competition-databases/blob/064dbe966586b28724e7dccc18eb6e3e552d36f6/architecture.png)
 
@@ -24,14 +24,14 @@ Your system will be run on an GCE E2 instance with 2 vCPU and 4 GB RAM by the Ha
   - You can use the command `docker compose -f docker-compose-db.yaml up -d` to start the databases
   - The test bench will run these containers alongside the services you provide
 - In an independent repository / directory, build the remaining three services as separate docker containers
-  - Serve the federated endpoint on port 8000
+  - Serve the gateway on port 8000
 - This repository must contain one `docker-compose.yml` that describes all the services
 - The test bench will run `docker compose up` in this directory, and this should completely initialise all three services
 
 ## Acceptance Criteria
 
 - Your repository must contain one `docker-compose.yml` that completely describes the three services (do not include the two database services provided)
-- The federation endpoint must serve GraphQL
+- The gateway endpoint must serve GraphQL
   - Inter-service protocol need not be (but can be) GraphQL
 - Do not implement query based response caching in your services (our test bench is pretty simple)
 - The single query endpoint must return the data in the JSON format shown in the examples, but may contain additional root level properties

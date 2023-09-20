@@ -35,7 +35,7 @@ Your system will be run on an GCE E2 instance with 2 vCPU and 4 GB RAM.
   - Inter-service protocol need not be (but can be) GraphQL
 - Do not implement query based response caching in your services (our test bench is pretty simple)
 - The single query endpoint must return the data in the JSON format shown in the examples, but may contain additional root level properties
-- Submit your entry by Thursday, 12 noon 21 September 2023
+- Submit your entry by Thursday, 12:00 pm PT (noon), 21 September 2023
 
 ## Test Cases / Examples
 

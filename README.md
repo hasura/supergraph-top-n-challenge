@@ -2,6 +2,15 @@
 
 > One winner. $1500. Can you build and execute the fastest GraphQL federated query?
 
+- Build a supergraph that processes a simple “top N” query that fetches data from 2 domain services (backed by 2 diff DBs).
+- Lowest P95 at 100RPS wins!
+- Use any stack or approach to build the GraphQL server.
+Eg: GraphQL federation or schema stitching or GraphQL gateway talking to 2 different REST/gRPC services.
+
+You have to build:
+- The graphql server
+- The 2 domain services
+
 You have two postgres databases. One contains the `threads` table and another contains the `posts` table.
 
 Build a GraphQL gateway that can process the following query: retrieve the first `n` `threads` sorted by `created` descending and for each, return the first `m` `posts` sorted by `created` descending.
@@ -17,6 +26,11 @@ Submit a link to your git repository as a Github Issue.
 Have the lowest P95 latency at 100rps (we may decide to change the rps depending on the latency spread).
 
 Your system will be run on an GCE E2 instance with 2 vCPU and 4 GB RAM by the Hasura team post submission.
+
+## Goal
+
+We want to use this challenge to highlight the different approaches & design decisions that go into building the GraphQL gateway and how domain services get unified.
+The Hasura team will put together a blogpost summarizing the different stacks and design approaches used by the participants!
 
 ## Environment and Setup
 

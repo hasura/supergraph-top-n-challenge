@@ -1,5 +1,3 @@
-create extension if not exists "uuid-ossp";
-
 drop table if exists threads;
 drop table if exists posts;
 
@@ -32,7 +30,7 @@ left join lateral (
     timestamp '2014-01-01 00:00:00' +
       random() * (timestamp '2023-01-01 00:00:00' -
                   timestamp '2014-01-01 00:00:00') created
-  from generate_series(1, 10000)
+  from generate_series(1, 2000)
 ) p on true;
 
 alter table threads add primary key (id);
@@ -63,3 +61,31 @@ select count(*) from
 
 create index on threads (created desc);
 create index on posts (thread_id, created desc);
+
+select t.id, t.created, p.id, p.created
+from (
+  select * from threads
+  order by created desc
+  limit 100
+) t
+left join lateral (
+  select p.id, p.created
+  from posts p
+  where p.thread_id = t.id
+  order by p.created desc
+  limit 100
+) p on true;
+
+select t.id, p.id
+from (
+  select * from threads
+  order by created desc
+  limit 2
+) t
+left join lateral (
+  select p.id, p.created
+  from posts p
+  where p.thread_id = t.id
+  order by p.created desc
+  limit 1
+) p on true;

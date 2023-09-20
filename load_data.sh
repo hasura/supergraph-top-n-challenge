@@ -25,3 +25,24 @@ dcf exec db1 psql -U dbuser -d db -c 'alter table "Artist" add primary key ("Art
 dcf cp ./Chinook.pgdump db2:/
 dcf exec db2 pg_restore -U dbuser -d postgres -c -C --strict-names -v -t Album -I IFK_AlbumArtistId /Chinook.pgdump
 dcf exec db2 psql -U dbuser -d db -c 'alter table "Album" add primary key ("AlbumId");'
+
+
+####
+
+# changed dataset
+
+dcf exec db1 pg_dump -U dbuser -d db -Fc > ./threads_posts.pgdump
+
+dcf exec db1 pg_dump -U dbuser -d db -t threads > ./threads.sql
+dcf exec db1 pg_dump -U dbuser -d db -t posts > ./posts.sql
+
+dcf cp ./threads_posts.pgdump db1:/
+dcf exec db1 pg_restore -U dbuser -l -f - /threads_posts.pgdump
+
+dcf cp ./threads_posts.pgdump db1:/
+dcf exec db1 pg_restore -U dbuser -d postgres -c -C --strict-names -v -t threads /threads_posts.pgdump
+dcf exec db1 psql -U dbuser -d db -c 'alter table "Artist" add primary key ("ArtistId");'
+
+dcf cp ./threads_posts.pgdump db2:/
+dcf exec db2 pg_restore -U dbuser -d postgres -c -C --strict-names -v -t Album -I IFK_AlbumArtistId /threads_posts.pgdump
+dcf exec db2 psql -U dbuser -d db -c 'alter table "Album" add primary key ("AlbumId");'

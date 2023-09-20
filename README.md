@@ -62,7 +62,7 @@ The Hasura team will put together a blogpost summarizing the different stacks an
   - Inter-service protocol need not be (but can be) GraphQL
 - Do not implement query based response caching in your services (our test bench is pretty simple)
 - The single query endpoint must return the data in the JSON format shown in the examples, but may contain additional root level properties
-- Submit your entry by Thursday, 12:00 pm PT (noon), 21 September 2023
+- **Deadline**: Submit your entry by Thursday, 12:00 pm PT (noon), 21 September 2023
 
 ## Test Cases / Examples
 
@@ -136,10 +136,10 @@ Limit values being updated for the respective variables. For `threadLimit` to be
 
 ## Prizes
 
-Prizes are Amazon gift cards
+Prizes are Amazon gift cards.
 
-Winner: $1500
-Runner-ups: $750, $500
+- Winner: $1500
+- Runner-ups: $750, $500
 
 ## Questions & Support
 

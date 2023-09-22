@@ -13,7 +13,13 @@ You have to build:
 
 Submit a link to your git repository as a Github Issue!
 
-**Deadline**: Submit your entry by Thursday, 12:00 pm PT (noon), 21 September 2023.
+~~**Deadline**: Submit your entry by Thursday, 12:00 pm PT (noon), 21 September 2023.~~
+
+Thank you everyone for stopping by. Submissions towards the prizes are now closed.
+
+We still think this is a fantastic minimal problem to showcase different methods of building supergraphs. Did you have another solution? Please stop by the Issues page and add your notes!
+
+Regards, Team Hasura.
 
 ## TOC
 

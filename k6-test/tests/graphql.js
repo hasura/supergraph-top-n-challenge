@@ -3,38 +3,36 @@ import { check, fail, sleep } from "k6";
 
 export const options = {
   vus: 10,
-  duration: '10s',
+  duration: "10s",
 };
 
-export default function() {
-  let query = `query ($threadLimit: Int!, $postLimit: Int!) {
-    threads (limit: $threadLimit) {
+export default function () {
+  let query = `query ($limit: Int!) {
+    threads (limit: $limit) {
       id
-      posts(limit: $postLimit) {
-        id
-      }
     }
   }`; // TODO
   // let graphqlEndpoint = `http://${__ENV.GRAPHQL_HOST}/`;
-  let graphqlEndpoint = `http://host.docker.internal:4000/`;
-  let variables = {"threadLimit": 5, "postLimit": 10}
+  let graphqlEndpoint = `http://localhost:8000`;
+  let variables = { limit: 5 };
 
   let headers = {
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
   };
 
-  let res = http.post(graphqlEndpoint,
+  let res = http.post(
+    graphqlEndpoint,
     JSON.stringify({ query: query, variables: variables }),
-    {headers: headers}
+    { headers: headers }
   );
 
   console.log(res.json());
 
   if (
     check(res, {
-      'graphql errors': (res) => res.json().errors !== undefined,
+      "graphql errors": (res) => res.json().errors !== undefined,
     })
   ) {
-    fail('graphql response error');
+    fail("graphql response error");
   }
 }

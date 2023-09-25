@@ -10,18 +10,13 @@ services:
       POSTGRES_PASSWORD: postgrespassword
     ports:
     - "7432:5432"
-  postgres2:
-    image: postgres:15.1
-    restart: always
-    volumes: 
-      - db2:/var/lib/postgresql/data
-      - ./db/posts.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    network_mode: host
+  pgadmin:
+    image: dpage/pgadmin4
     environment:
-      POSTGRES_PASSWORD: postgrespassword
-    ports:
-    - "8432:5432"
+      PGADMIN_DEFAULT_EMAIL: foo@foo.foo
+      PGADMIN_DEFAULT_PASSWORD: bar
+    network_mode: host
 volumes:
   db1:
-    driver: local
-  db2:
     driver: local

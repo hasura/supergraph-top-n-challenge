@@ -37,6 +37,6 @@ services:
       - "6565:6565"
     environment:
       - K6_OUT=influxdb=http://influxdb:8086/k6
-      - GRAPHQL_ENDPOINT="http://host.docker.internal:4000/"
+      - GRAPHQL_HOST="host.docker.internal:4000"
     volumes:
       - ./tests:/scripts

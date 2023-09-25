@@ -1,0 +1,10 @@
+federation_version: 2
+subgraphs:
+  threads:
+    routing_url: http://localhost:9080/
+    schema:
+      subgraph_url: http://localhost:9080/
+  posts:
+    routing_url: http://localhost:9090/
+    schema:
+      subgraph_url: http://localhost:9090/

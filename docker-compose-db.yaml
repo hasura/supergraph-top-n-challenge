@@ -5,7 +5,7 @@ services:
     restart: always
     volumes: 
       - db1:/var/lib/postgresql/data
-      - ./db/posts.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      - ./db/threads.sql:/docker-entrypoint-initdb.d/create_tables.sql
     environment:
       POSTGRES_PASSWORD: postgrespassword
     ports:
@@ -15,7 +15,7 @@ services:
     restart: always
     volumes: 
       - db2:/var/lib/postgresql/data
-      - ./db/threads.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      - ./db/posts.sql:/docker-entrypoint-initdb.d/create_tables.sql
     environment:
       POSTGRES_PASSWORD: postgrespassword
     ports:

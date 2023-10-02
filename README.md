@@ -1,5 +1,7 @@
 # The Supergraph Top-N Challenge
 
+**Context**: We ran this challenge at GraphQL Conf and because of the interesting results that we saw, we decided to run it again for Hacktoberfest 🎉
+
 > Winner takes a [$1000](#prizes) prize. Can you build and execute the fastest GraphQL gateway?
 
 - Build a supergraph that processes a simple “top N” query that fetches data from 2 domain services (backed by 2 different databases)

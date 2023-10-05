@@ -29,6 +29,7 @@ Regards, Team Hasura.
 - [Acceptance Criteria](#acceptance-criteria)
 - [Test Cases / Examples](#test-cases--examples)
 - [Prizes](#prizes)
+- [Submission](#submission)
 - [Questions and Support](#questions-and-support)
 
 ## Problem Statement

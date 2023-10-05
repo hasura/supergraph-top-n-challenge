@@ -150,6 +150,10 @@ Limit values being updated for the respective variables. For `threadLimit` to be
 }
 ```
 
+## Submission
+
+Once your supergraph is ready, open a PR on [submissions.md](https://github.com/hasura/supergraph-top-n-challenge/blob/master/submissions.md) and add your name, submission date and link to the supergraph repository.
+
 ## Prizes
 
 Prizes are Amazon gift cards.

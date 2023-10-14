@@ -1,0 +1,58 @@
+{
+    "components": {
+      "schemas": {
+        "thread": {
+          "type": "object",
+          "properties": {
+            "created": {
+              "type": "string"
+            },
+            "id": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "info": {
+      "title": "Threads API",
+      "version": "1.0.0"
+    },
+    "openapi": "3.0.0",
+    "paths": {
+      "/threads": {
+        "get": {
+          "parameters": [
+            {
+              "in": "query",
+              "name": "limit",
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "items": {
+                      "$ref": "#/components/schemas/thread"
+                    },
+                    "type": "array"
+                  }
+                }
+              },
+              "description": ""
+            }
+          }
+        }
+      }
+    },
+    "servers": [
+      {
+        "description": "Development",
+        "url": "http://localhost:4001"
+      }
+    ]
+  }

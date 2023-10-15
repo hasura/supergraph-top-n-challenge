@@ -22,3 +22,9 @@ Name:
 Submission date:
 
 Link to supergraph repo:
+## 3
+Name: [Marcus](https://github.com/nguyentrung194)
+
+Submission date: October 15 2023
+
+Link to supergraph repo: https://github.com/hasura/supergraph-top-n-challenge/issues/6

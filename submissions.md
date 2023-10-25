@@ -22,6 +22,6 @@ Link to supergraph repo: https://github.com/hasura/supergraph-top-n-challenge/is
 
 Name: [Amit](https://github.com/amit-ksh)
 
-Submission date: October 23 2023
+Submission date: October 25 2023
 
 Link to supergraph repo: https://github.com/hasura/supergraph-top-n-challenge/issues/10

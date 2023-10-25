@@ -16,12 +16,12 @@ Name: [Amit](https://github.com/amit-ksh)
 
 Submission date: October 23 2023
 
-Link to supergraph repo: https://github.com/amit-ksh/supergraph-top-n-challenge/tree/apollo
+Link to supergraph repo: https://github.com/hasura/supergraph-top-n-challenge/issues/9
 
 ## 2
 
-Name:
+Name: [Amit](https://github.com/amit-ksh)
 
-Submission date:
+Submission date: October 23 2023
 
-Link to supergraph repo
+Link to supergraph repo: https://github.com/hasura/supergraph-top-n-challenge/issues/10

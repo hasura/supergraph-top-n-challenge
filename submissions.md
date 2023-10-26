@@ -10,11 +10,11 @@ Submission date: September 21 2023
 Link to supergraph repo: https://github.com/hasura/supergraph-top-n-challenge/issues/2
 
 ## 1
-Name:
+Name: Nate Woods @bign8
 
-Submission date:
+Submission date: 2023-10-31
 
-Link to supergraph repo:
+Link to supergraph repo: https://github.com/bign8/supergraph-top-n-challenge
 
 ## 2
 Name:

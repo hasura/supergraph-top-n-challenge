@@ -19,15 +19,24 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
   gateway:
+    network_mode: "host"
     build:
       context: ./services/gateway
     depends_on:
       - threads
       - posts
     environment:
-      THREADS_URL: http://host.docker.internal:4001/threads
-      POSTS_URL: http://host.docker.internal:4002/posts
+      THREAD_URL: http://host.docker.internal:4001/threads
+      POST_URL: http://host.docker.internal:4002/posts
+      THREAD_URL_BASE: http://host.docker.internal:4001
+      THREAD_URL_OAS_SPEC: http://host.docker.internal:4001/openapi-spec
       PORT: 8000
     ports: ['8000:8000']
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "./health-check.sh"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

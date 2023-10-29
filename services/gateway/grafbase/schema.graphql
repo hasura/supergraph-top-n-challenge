@@ -1,0 +1,16 @@
+extend schema
+  @openapi(
+    name: "threads"
+    namespace: false
+    url: "{{ env.THREAD_URL_BASE }}"
+    schema: "{{ env.THREAD_URL_OAS_SPEC }}"
+  )
+
+type Post {
+  id: BigInt!
+  created: DateTime!
+}
+
+extend type ThreadsThread {
+  posts(limit: Int! = 10): [Post!] @resolver(name: "posts")
+}

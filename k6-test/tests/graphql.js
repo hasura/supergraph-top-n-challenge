@@ -7,7 +7,14 @@ export const options = {
 };
 
 export default function() {
-  let query = ``; // TODO
+  let query = `query {
+    threads (limit: 20) {
+      id
+      posts (limit: 100) {
+        id
+      }
+    }
+  }`; // TODO
   let graphqlEndpoint = `${__ENV.GRAPHQL_ENDPOINT}`;
 
   let headers = {

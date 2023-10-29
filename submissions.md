@@ -21,4 +21,4 @@ Name: Agung Sidharta (https://github.com/Gungz)
 
 Submission date: 2023-10-29
 
-Link to supergraph repo: (https://github.com/Gungz/supergraph-top-n-challenge)
+Link to supergraph repo: https://github.com/Gungz/supergraph-top-n-challenge

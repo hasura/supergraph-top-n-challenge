@@ -162,6 +162,8 @@ Prizes are Amazon gift cards.
 - Winner: $1000
 - Runners-up: $750, $500
 
+While you're welcome to submit as many entries as you like, please note that each person is eligible for only one prize.
+
 ## Questions and Support
 
 For any questions or support, just open a Github Issue on this repo!

@@ -10,11 +10,11 @@ Submission date: September 21 2023
 Link to supergraph repo: https://github.com/hasura/supergraph-top-n-challenge/issues/2
 
 ## 1
-Name:
+Name: Dhruv Arora
 
-Submission date:
+Submission date: Oct 30, 2023
 
-Link to supergraph repo:
+Link to supergraph repo: https://github.com/dhruvarora93/graphql-supergraph
 
 ## 2
 Name:
